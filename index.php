@@ -19,10 +19,11 @@ if ($page == 'login') {
     $password = $_REQUEST['password'] ?? false;
     if (!$login || !$password) {
         $error_message = 'Вы не ввели данные для авторизации';
-    }
-    $user = User::login($login, $password);
-    if (!$user) {
-        $error_message = 'Неверный логин или пароль';
+    } else {
+        $user = User::login($login, $password);
+        if (!$user) {
+            $error_message = 'Неверный логин или пароль';
+        }
     }
     $page = 'main';
 }
