@@ -37,7 +37,6 @@ if (!$user && !in_array($page, $page_no_login)) {
 $error = false;
 $data = [];
 include "pages/{$page}.php";
-MyDB::end_transaction();
 
 if (isset($_REQUEST['json'])) {
 	if ($error) {
