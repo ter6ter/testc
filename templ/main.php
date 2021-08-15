@@ -35,6 +35,9 @@
         </div>
         <?php endif;?>
     </div>
+    <div class="error-message" <?=(isset($error_message) ? 'style="display:block";' : '')?>>
+        <?=(isset($error_message) ? $error_message : '')?>
+    </div>
     <div id="slider-block">
         <input type="button" id="slider-prev" value="<=">
         <?php foreach ($comments_slider as $comment):?>
@@ -60,9 +63,6 @@
                 <?=$comments_slider[1]->text?>
             </div>
         <?endif;?> -->
-    </div>
-    <div id="error-message" <?=(isset($error_message) ? 'style="display:block";' : '')?>>
-        <?=(isset($error_message) ? $error_message : '')?>
     </div>
     <div class="main-text">
         <p>Генеральный директор Государственного Эрмитажа Михаил Пиотровский подтвердил, что поддержал идею снять клип в интерьерах музея и предоставил Линдеманну возможность провести съемки. Он отметил, что съемки организовали как одно из событий года "Россия - Германия", который начался выставкой "Железный век. Европа без границ". По словам Пиотровского, она "совместила размах научного сотрудничества с интеллигентной манерой обращения с "перемещенным искусством".</p>
